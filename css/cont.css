@@ -70,7 +70,7 @@
     text-align: center;
 }
 
-.privacy {
+.contacts .privacy {
     font-weight: 400;
     padding-top: 15px;
     font-size: 14px;
@@ -137,7 +137,7 @@
     font-size: 1.4vw;
   }
 
-  .privacy {
+  .contacts .privacy {
     padding-top: 1.45vw;
     font-size: 1.47vw;
   }
