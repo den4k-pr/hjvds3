@@ -104,7 +104,7 @@
   .contacts {
     padding: 4.2vw;
      background-image: url(../images/contacts-d.png);
-     margin-bottom: 5vw;
+     margin-bottom: 5vw !important;
   }
 
   .contacts-title {
@@ -120,7 +120,7 @@
 
   .contacts-nav {
     padding: 1.25vw 0;
-    max-width: 33.33vw;
+    max-width: 40.33vw !important;
   }
 
   .contacts-nav a {
