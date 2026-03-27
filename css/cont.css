@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Asap+Condensed:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Bebas+Neue&family=League+Gothic&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+.contacts {
+    background-image: url(../images/contacts.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    padding: 30px;
+    margin-bottom: 200px;
+}
+
+.contacts-title {
+    font-weight: 300;
+    font-size: 64px;
+    line-height: 80%;
+    text-transform: uppercase;
+    text-align: center;
+    font-family: "League Gothic", sans-serif;
+    color: #fff;
+    text-shadow: 0 22px 17px rgba(0, 0, 0, 0.6);
+}
+
+.contacts-title span {
+    background: linear-gradient(174deg, #ff4000 0%, #fa0 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.contacts-subTitle {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 100%;
+    text-transform: uppercase;
+    text-align: center;
+    padding-top: 25px;
+    padding-bottom: 15px;
+    color: #fff;
+}
+
+.contacts-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 0;
+    width: 100%;
+    max-width: 200px;
+    margin: 0 auto;
+}
+
+.contacts-nav a {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 143%;
+    gap: 3px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+}
+
+.contacts-nav a img {
+    width: 12px;
+    height: 12px;
+}
+
+.suport {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 167%;
+    color: #cacaca;
+    text-align: center;
+}
+
+.privacy {
+    font-weight: 400;
+    padding-top: 15px;
+    font-size: 14px;
+    line-height: 179%;
+    text-decoration: underline;
+    text-decoration-skip-ink: none;
+    text-align: center;
+    color: #cacaca;
+}
+
+
+
+.contacts-nav {
+    max-width: 280px;
+}
+
+.contacts-nav a img {
+    width: 25px;
+    height: 25px;
+    object-fit: contain;
+}
+
+.support_link {
+    text-align: center;
+    color: #cacaca;
+    font-weight: 400;
+    text-decoration: underline;
+}
+
+@media (min-width: 700px) {
+  .contacts {
+    padding: 4.2vw;
+     background-image: url(../images/contacts-d.png);
+     margin-bottom: 5vw;
+  }
+
+  .contacts-title {
+    font-size: 7.33vw;
+    text-shadow: 0 1.83vw 1.42vw rgba(0, 0, 0, 0.6);
+  }
+
+  .contacts-subTitle {
+    font-size: 1.73vw;
+    padding-top: 2.08vw;
+    padding-bottom: 1.25vw;
+  }
+
+  .contacts-nav {
+    padding: 1.25vw 0;
+    max-width: 33.33vw;
+  }
+
+  .contacts-nav a {
+    font-size: 1.47vw;
+    gap: 0.25vw;
+  }
+
+  .contacts-nav a img {
+    width: 4.08vw;
+    height: 4.08vw;
+  }
+
+  .suport {
+    font-size: 1.4vw;
+  }
+
+  .privacy {
+    padding-top: 1.45vw;
+    font-size: 1.47vw;
+  }
+
+  .support_link {
+    font-size: 1.4vw;
+  }
+}

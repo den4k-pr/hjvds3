@@ -1,0 +1,76 @@
+.second-slider,
+.first-slider{
+    padding: 15px 0 15px 15px;
+    margin: 5% 9%;
+    position: relative;
+}
+
+.first-slider::before,
+.first-slider::after{
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    z-index: 99;
+    height: 83%;
+    width: 0;
+    box-shadow: 0 0 5vw 5vw #fff;
+    pointer-events: none;
+}
+
+.first-slider::after{
+    right: -2vw;
+}
+
+.first-slider::before{
+    left: -2vw;
+}
+
+.second-slider .swiper,
+.first-slider .swiper{
+    padding: 30px 0 15px 0;
+}
+
+.second-slider-pagination.swiper-pagination-progressbar,
+.first-slider-pagination.swiper-pagination-progressbar {
+  position: relative; /* Дозволяє розмістити під слайдером у потоці */
+  margin-left: auto;
+  margin-right: auto;
+    height: 0.5vw !important;
+  background: rgba(54, 163, 18, 0.5); 
+  border-radius: 200px !important;
+  overflow: hidden;
+  display: block;
+}
+
+/* Активна лінія (фікс для відображення) */
+.second-slider-pagination .swiper-pagination-progressbar-fill,
+.first-slider-pagination .swiper-pagination-progressbar-fill {
+  background: #36a312 !important; /* Force колір, якщо Swiper його перебиває */
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+.buttons-sl{
+    display: flex;
+    align-items: center;
+    gap: 2vw;
+    padding-right: 15%;
+}
+
+.buttons-sl img{
+    width: 15vw;
+    object-fit: contain;
+}
+
+@media(min-width: 700px){
+    .buttons-sl img{
+        width: 8vw;
+        object-fit: contain;
+    }
+
+    .buttons-sl{
+        padding-right: 5%;
+    }
+}

@@ -1,0 +1,141 @@
+header {
+    padding-bottom: 3.2rem;
+    padding-top: 2.4rem;
+    background-image: url(../../images/header-bg.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+
+.header-inf{
+    width: 100%;
+    height: 4.5rem;
+    background: #FF0202;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    white-space: nowrap;
+    padding-top: 0.7rem;
+}
+.header-inf-text{
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 1.4rem;
+    line-height: 121%;
+    text-transform: uppercase;
+    text-align: center;
+    color: #fff;
+    display: inline-block;
+}
+.header-inf-inner {
+      display: inline-block;
+      animation: scroll 15s linear infinite;
+    }
+    .header-inf-item{
+        display: flex;
+        align-items: center;
+    }
+@keyframes scroll {
+      0% {
+        transform: translateX(0);
+      }
+      100% {
+        transform: translateX(-70%);
+      }
+    }
+
+    .header-title{
+        font-family: var(--second-family);
+    font-weight: 400;
+    font-size: 7.6rem;
+    line-height: 92%;
+    text-transform: uppercase;
+    text-align: center;
+    color: #fff;
+    }
+    .header-second-title{
+        font-family: var(--second-family);
+    font-weight: 400;
+    font-size: 3.5rem;
+    line-height: 114%;
+    text-transform: uppercase;
+    color: #fff;
+    text-align: center;
+    }
+    .header-box{
+        width: 17rem;
+        margin-top: 2.3rem;
+        margin-left: 1.8rem;
+    }
+    .header-box p{
+        font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 1.5rem;
+    line-height: 120%;
+    text-transform: uppercase;
+    color: #fff;
+    margin-top: 2.3rem;
+    }
+    .header-upperprice-text{
+        font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 106%;
+    text-align: center;
+    color: #fff;
+    margin-top: 20.3rem;
+    }
+    .header-price-wrap{
+        display: flex;
+        gap: 1rem;
+        justify-content: center;
+        margin-top: 2.1rem;
+    }
+    .price-new{
+        font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 4.5rem;
+    line-height: 156%;
+    letter-spacing: -0.06em;
+    text-transform: uppercase;
+    text-align: center;
+    color: #fff;
+    width: 16.5rem;
+    height: 7rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../../images/price-new-bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 0.5rem;
+        padding-top: 0.5rem;
+    }
+    .price-old{
+        width: 12rem;
+        height: 7rem;
+        background-color: #202020;
+        border-radius: 0.5rem;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        gap: 0.3rem;
+        padding-top: 0.5rem;
+    }
+    .price-old p{
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 3rem;
+    line-height: 100%;
+    text-transform: uppercase;
+    text-align: center;
+    color: #fff;
+    }
+    .price-old span{
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 1.4rem;
+    line-height: 100%;
+    text-align: center;
+    color: #fff;
+    }
