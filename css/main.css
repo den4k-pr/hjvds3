@@ -340,6 +340,11 @@ img {
   box-shadow: none !important;
 }
 
+.s1-header-timer,
+.s1-header-button {
+  display: none;
+}
+
 .slick-prev {
   background: url('../images/left.png') no-repeat;
   left: 35%;
@@ -2322,8 +2327,10 @@ footer p {
   .s1 {
     min-height: auto;
     background-image: url(../images/fon-web.webp);
-    background-size: contain;
+    background-size: 94%;
+    background-position: bottom;
     padding-bottom: 3vw;
+    padding-top: 4vw;
     margin: 0 6%;
   }
 
@@ -2348,6 +2355,106 @@ footer p {
     height: 8.25vw;
     padding: 0.67vw 0.83vw 0.67vw 1.67vw;
     margin-bottom: 0.58vw;
+  }
+
+  .s1-header {
+    padding: 0.7vw 3vw;
+    border-radius: 2.4vw;
+    display: flex;
+    width: 83vw;
+    position: fixed;
+    z-index: 100;
+    backdrop-filter: blur(3px);
+    left: 50%;
+    transform: translate(-50%, -50%);
+    top: 7%;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.25);
+    background: rgba(255, 255, 255, 0.2);
+
+  }
+
+  .priceBlock h4:after {
+    content: "";
+    display: block;
+    width: 8vw;
+    height: 0.2vw;
+    top: 0.6vw;
+    left: 3vw;
+    background: red;
+}
+
+  .top-line-wrapper {
+    position: initial;
+    width: auto;
+  }
+
+  .s1-header-timer {
+    display: flex;
+    align-items: center;
+    gap: .4vw;
+  }
+
+  .s1-header-timer-item {
+    border-radius: 7.24vw;
+    width: 4.92vw;
+    height: 3.4vw;
+    background: linear-gradient(180deg, #30b005 0%, #114200 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .s1-header-timer-item p {
+    font-size: 0.72vw;
+    line-height: 100%;
+    text-align: center;
+    color: #fff;
+  }
+
+  .s1-header-timer-item h3 {
+    font-weight: 400;
+    font-size: 1.54vw;
+    line-height: 100%;
+    text-align: center;
+    font-family: 'Bebas Neue';
+    color: #fff;
+  }
+
+  .s1-header-button {
+    display: block;
+    box-shadow: inset 0 0.1vw 0.78vw 0 rgba(0, 0, 0, 0.16);
+    background: linear-gradient(176deg, #ff4000 0%, #ff5e00 100%);
+    border-radius: 4.27vw;
+    width: 18.72vw;
+    height: 3.4vw;
+    font-weight: 700;
+    display: flex;
+    cursor: pointer;
+    font-size: 1.28vw;
+    gap: 0.3vw;
+    justify-content: center;
+    flex-direction: column;
+    line-height: 100%;
+    text-transform: uppercase;
+    text-align: center;
+    color: #fff;
+  }
+
+  .s1-header-button span {
+    font-weight: 600;
+    font-size: 0.82vw;
+    line-height: 100%;
+    text-transform: uppercase;
+    text-align: center;
+    color: #fff;
   }
 
   .s3 .items img {
@@ -2380,25 +2487,25 @@ footer p {
   }
 
   .s8 .container {
-    padding: 0 10%;
+    padding: 3% 10%;
   }
 
   .s8 .items p {
-    font-size: 1.8vw;
+    font-size: 1.5vw;
   }
 
   .s8 .items {
-    padding: 1.5vw 3vw;
-    border-radius: 6vw;
+    padding: 1.3vw 2.5vw;
+    border-radius: 5vw;
   }
 
   .s8 .items:nth-child(4) img {
-    width: 10vw;
+    width: 8vw;
   }
 
   .s8 .items:nth-child(3),
   .s8 .items:nth-child(4) {
-    padding: 0vw 3vw;
+    padding: 0vw 2.5vw;
   }
 
   .tablet-img {
@@ -2440,7 +2547,9 @@ footer p {
   }
 
   .s8 {
-    margin: 0 9%;
+    margin: 4vw auto 0 auto;
+    max-width: 80vw;
+    border-radius: 9vw;
   }
 
   .s3 .items p {
@@ -2681,7 +2790,7 @@ footer p {
   }
 
   .money14 {
-    width: 60vw;
+    width: 50vw;
   }
 
   .s10 {
@@ -2733,45 +2842,45 @@ footer p {
   }
 
   .redBlock {
-    height: 26.28vw;
-    border-radius: 2.55vw;
-    min-width: 60.85vw;
-    padding: 2.5vw 3.57vw;
-    margin-bottom: 2vw;
+    height: 21.02vw;
+    border-radius: 2.04vw;
+    min-width: 48.68vw;
+    padding: 2vw 2.86vw;
+    margin-bottom: 1.6vw;
     overflow: hidden;
   }
 
   .redBlock:after {
-    width: 64vw;
-    height: 28.4vw;
+    width: 51.2vw;
+    height: 22.72vw;
     background-image: url(../images/bonusFon-4.webp);
   }
 
   .redBlock-title {
-    font-size: 4.71vw;
-    padding-bottom: 1.42vw;
+    font-size: 3.77vw;
+    padding-bottom: 1.14vw;
+  }
+
+  .redBlock-title span {
+    font-size: 2.76vw;
+  }
+
+  .redBlock-text {
+    font-size: 1.6vw;
+  }
+
+  .redBlock-button {
+    font-size: 1.82vw;
+    margin: 1.14vw auto 1.14vw 0;
+    border-radius: 0.65vw;
+    width: 13.71vw;
+    height: 3.66vw;
+    padding: 0 1.71vw;
+    gap: 1.14vw;
   }
 
   .accordion .info p {
     font-size: 1.3vw;
-  }
-
-  .redBlock-title span {
-    font-size: 3.45vw;
-  }
-
-  .redBlock-text {
-    font-size: 2vw;
-  }
-
-  .redBlock-button {
-    font-size: 2.28vw;
-    margin: 1.42vw auto 1.42vw 0;
-    border-radius: 0.81vw;
-    width: 17.14vw;
-    height: 4.57vw;
-    padding: 0 2.14vw;
-    gap: 1.42vw;
   }
 
   .s4-m-img {
@@ -2785,7 +2894,8 @@ footer p {
   .s4 {
     background: linear-gradient(176deg, #ff4000 0%, #ff8400 100%);
     padding: 1.25vw 0;
-    margin: 0 9%;
+    margin: 0 auto;
+    max-width: 75vw;
     border-radius: 8.33vw 8.33vw 0 0;
   }
 
@@ -2830,10 +2940,11 @@ footer p {
 
   .s5 {
     margin-top: -3vw;
-    border-radius: 2.5vw;
+    border-radius: 3.5vw;
     padding: 3.33vw 0;
-    margin-left: 9%;
-    margin-right: 9%;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 75vw;
   }
 
   .s5 .container {

@@ -11,3 +11,13 @@
   font-weight: normal;
   src: url("../fonts/aa_higherup.ttf") format("truetype"); 
 }
+
+@font-face {
+    font-family: 'Bebas Neue';
+    src: url('../fonts/bebasneuethin.woff2') format('woff2'),
+         url('../fonts/bebasneuethin.woff') format('woff'),
+         url('../fonts/bebasneuethin.ttf') format('truetype');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}

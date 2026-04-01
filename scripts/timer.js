@@ -6,45 +6,72 @@ function formatTime(hours, minutes, seconds) {
     };
 }
 
-// Функція для оновлення таймера
-function updateTimer() {
-    // Отримуємо всі елементи таймера за допомогою селекторів
-    let timers = document.querySelectorAll('.timer');
+// ключ для кешу
+const TIMER_STORAGE_KEY = 'global_timer_end';
 
-    timers.forEach(timer => {
-        // Отримуємо значення годин, хвилин та секунд для кожного таймера
-        let hours = parseInt(timer.querySelector('.hours').textContent);
-        let minutes = parseInt(timer.querySelector('.minutes').textContent);
-        let seconds = parseInt(timer.querySelector('.seconds').textContent);
+// тривалість 24 години в мілісекундах
+const DURATION = 24 * 60 * 60 * 1000;
 
-        // Зменшуємо час на одну секунду
-        if (seconds > 0) {
-            seconds--;
-        } else {
-            if (minutes > 0) {
-                minutes--;
-                seconds = 59;
-            } else {
-                if (hours > 0) {
-                    hours--;
-                    minutes = 59;
-                    seconds = 59;
-                } else {
-                    // Таймер завершено
-                    clearInterval(timerIntervalTimer);
-                    // alert('Час вийшов!');
-                    return;
-                }
-            }
-        }
+function getOrCreateEndTime() {
+    let saved = localStorage.getItem(TIMER_STORAGE_KEY);
 
-        // Форматуємо та оновлюємо вміст таймера
-        const formattedTime = formatTime(hours, minutes, seconds);
-        timer.querySelector('.hours').textContent = formattedTime.hours;
-        timer.querySelector('.minutes').textContent = formattedTime.minutes;
-        timer.querySelector('.seconds').textContent = formattedTime.seconds;
-    });
+    if (saved) {
+        return parseInt(saved);
+    }
+
+    let endTime = Date.now() + DURATION;
+    localStorage.setItem(TIMER_STORAGE_KEY, endTime);
+    return endTime;
 }
 
-// Оновлюємо таймер кожну секунду
+function calculateRemaining(endTime) {
+    let now = Date.now();
+    let diff = endTime - now;
+
+    if (diff <= 0) {
+        // перезапуск циклу
+        endTime = Date.now() + DURATION;
+        localStorage.setItem(TIMER_STORAGE_KEY, endTime);
+        diff = endTime - Date.now();
+    }
+
+    let totalSeconds = Math.floor(diff / 1000);
+
+    let hours = Math.floor(totalSeconds / 3600);
+    let minutes = Math.floor((totalSeconds % 3600) / 60);
+    let seconds = totalSeconds % 60;
+
+    return { hours, minutes, seconds };
+}
+
+function renderAllTimers(hours, minutes, seconds) {
+    const formatted = formatTime(hours, minutes, seconds);
+
+    // звичайні таймери
+    document.querySelectorAll('.timer').forEach(timer => {
+        timer.querySelector('.hours').textContent = formatted.hours;
+        timer.querySelector('.minutes').textContent = formatted.minutes;
+        timer.querySelector('.seconds').textContent = formatted.seconds;
+    });
+
+    // header таймер
+    const hoursEl = document.querySelector('.hours-header');
+    const minutesEl = document.querySelector('.minutes-header');
+    const secondsEl = document.querySelector('.seconds-header');
+
+    if (hoursEl && minutesEl && secondsEl) {
+        hoursEl.textContent = formatted.hours;
+        minutesEl.textContent = formatted.minutes;
+        secondsEl.textContent = formatted.seconds;
+    }
+}
+
+function updateTimer() {
+    const endTime = getOrCreateEndTime();
+    const { hours, minutes, seconds } = calculateRemaining(endTime);
+    renderAllTimers(hours, minutes, seconds);
+}
+
+// старт
+updateTimer();
 let timerIntervalTimer = setInterval(updateTimer, 1000);
